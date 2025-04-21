@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Schizophrenia zdora</title>
+    <meta name="description" content="VR horror">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <style>
+      body { margin: 0; background: black; color: white; font-family: monospace; }
+      .overlay { position: absolute; top: 10px; left: 10px; z-index: 10; color: white; }
+    </style>
+  </head>
+  <body>
+    <div class="overlay">Schizophrenia zdora</div>
+    <a-scene background="color: #000000">
+      <!-- Лес -->
+      <a-entity environment="preset: forest; groundColor: #222; skyType: atmosphere; lighting: point"></a-entity>
+
+      <!-- Изолента -->
+      <a-box position="-1 1.5 -3" depth="0.1" height="0.1" width="3" color="#ff00ff" rotation="0 0 20"></a-box>
+      <a-box position="2 1.2 -4" depth="0.1" height="0.1" width="2" color="#00ffff" rotation="0 0 -30"></a-box>
+
+      <!-- Надписи -->
+      <a-text value="Washington" color="#FF0000" position="0 2 -5" rotation="0 0 0" align="center" width="6"></a-text>
+
+      <!-- Аудио-шёпот -->
+      <a-sound src="https://cdn.glitch.global/f0089b4c-5bc1-4f07-980a-b7b1c9cfd9a2/whispers.mp3?v=1688063611413"
+               autoplay="true" loop="true" volume="0.4" position="0 2 -3"></a-sound>
+
+      <!-- Камера -->
+      <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+    </a-scene>
+  </body>
+</html>
